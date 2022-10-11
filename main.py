@@ -30,8 +30,8 @@ def main():
     captchaInput.send_keys(captchaCode)
     try:
         # 通道选择
-        channelSelect = driver.find_element_by_id('channelshow')
-        channels = driver.find_elements_by_tag_name('span')[user_channel]
+        channelSelect = driver.find_element(By.ID,'channelshow')
+        channels = driver.find_elements(By.TAG_NAME,'span')[user_channel]
         channelSelect.click()
         channels.click()
         print('正在连接 njtech-home ...')
